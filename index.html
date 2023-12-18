@@ -45,6 +45,24 @@
     </div>
     
     <div id="links">
+      <a class="link" href="#saweran">
+        <i class="fa-solid fa-circle-dollar-to-slot"></i>&nbsp;</i>Saweran
+      </a>
+      <div class="overlay" id="saweran">
+        <div class="popupb">
+          <div class="popup-photob">
+            <a href="Bank_Central_Asia12.png" target="_blank">
+              <img src="Bank_Central_Asia12.png" alt="Profile Picture">
+            </a>
+          </div>
+          <div class="popup-quoteb">
+            <span> ABDULLOH LUKMAN NUR HAKIM </span>
+            <br>
+            <input type="text" value="4372926914" id="copyText" readonly><button id="copyBtn">Copy Text</button>
+          </div>
+          <a class="popup-closeb" onclick="history.back()">&times;</a>
+        </div>
+      </div>
       <a class="link" href="https://drive.google.com/drive/folders/1--YMtFryqhBRxagXtP0EBNpBxG9xwLUW" target="_blank">
         <i class="fa-solid fa-camera-retro"></i>&nbsp;</i>L-rum Sunmori
       </a>
@@ -53,5 +71,21 @@
     <div id="hashtag">
       #BeHappy❤
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script>
+            const copyBtn = document.getElementById('copyBtn')
+            const copyText = document.getElementById('copyText')
+            
+            copyBtn.onclick = () => {
+                copyText.select();    // Selects the text inside the input
+                document.execCommand('copy');    // Simply copies the selected text to clipboard 
+                 Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'success',
+                    title: 'Text copied to clipboard',
+                    showConfirmButton: false,
+                    timer: 1000
+                });
+            }
+        </script>
   </body>
 </html>
